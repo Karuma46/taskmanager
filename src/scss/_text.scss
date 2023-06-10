@@ -1,0 +1,37 @@
+h2,
+h3,
+h4,
+a,
+p,
+ul,
+li {
+	font-family: "Montserrat", sans-serif;
+}
+
+@mixin text($color, $weight, $size) {
+	color: $color;
+	font-weight: $weight;
+	font-size: $size;
+	margin: 10px 0px;
+}
+
+h2 {
+	@include text($black, 700, 36px);
+}
+
+h3 {
+	@include text($grey, 500, 24px);
+}
+
+h4 {
+	@include text($black, 700, 20px);
+}
+
+a {
+	@include text($black, 700, 16px);
+	text-decoration: none;
+}
+
+p {
+	@include text($grey, 500, 18px);
+}
