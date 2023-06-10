@@ -1,0 +1,41 @@
+#sidebar {
+	width: 300px;
+	height: 100vh;
+	position: fixed;
+}
+
+#logo {
+	width: 100%;
+	padding: 50px;
+	img {
+		width: 50px;
+	}
+}
+
+nav {
+	width: 100%;
+	.navItem {
+		width: 100%;
+		display: block;
+		padding: 20px 0px 20px 50px;
+		border-top-right-radius: 10px;
+		border-bottom-right-radius: 10px;
+		overflow: hidden;
+		cursor: pointer;
+		span {
+			font-size: 16px;
+			i {
+				margin-right: 10px;
+			}
+		}
+		&:hover {
+			background-color: $black;
+			i {
+				color: $yellow;
+			}
+			a {
+				color: $white;
+			}
+		}
+	}
+}
