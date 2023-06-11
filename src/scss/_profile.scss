@@ -1,0 +1,41 @@
+#profile {
+	width: 450px;
+	padding: 20px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#avatar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.avatarImg {
+	width: 60px;
+	height: 60px;
+	margin-right: 20px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 2px solid $black;
+}
+
+.avatarName {
+	h4 {
+		margin-bottom: 5px;
+	}
+}
+
+#actionSection {
+	span {
+		display: inline-block;
+		margin: 0px 10px;
+		font-size: 20px;
+		cursor: pointer;
+		transition: all 0.1s ease-in-out;
+		&:hover {
+			color: $yellow;
+		}
+	}
+}

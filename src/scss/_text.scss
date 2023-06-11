@@ -23,7 +23,7 @@ h3 {
 }
 
 h4 {
-	@include text($black, 700, 20px);
+	@include text($black, 700, 18px);
 }
 
 a {
@@ -32,5 +32,5 @@ a {
 }
 
 p {
-	@include text($grey, 500, 18px);
+	@include text($grey, 500, 16px);
 }
