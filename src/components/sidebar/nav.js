@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-const NavItem = ({ icon, name, link }) => {
+const NavItem = ({ icon, name, active, link }) => {
 	return (
-		<li className="navItem">
+		<li className={`navItem ${active ? "active" : ""}`}>
 			<span>
 				<i className={`fas fa-${icon}`}></i>
 				<a href={link ? link : "/"}>{name}</a>
@@ -16,22 +16,27 @@ const Nav = () => {
 		{
 			name: "Dashboard",
 			icon: "chart-simple",
+			active: true,
 		},
 		{
 			name: "Analytics",
 			icon: "chart-pie",
+			active: false,
 		},
 		{
 			name: "Teams",
 			icon: "users",
+			active: false,
 		},
 		{
 			name: "Documents",
 			icon: "file",
+			active: false,
 		},
 		{
 			name: "Settings",
 			icon: "gear",
+			active: false,
 		},
 	]);
 
@@ -43,6 +48,7 @@ const Nav = () => {
 						<NavItem
 							icon={link.icon}
 							name={link.name}
+							active={link.active}
 							key={index}
 						/>
 					))}
