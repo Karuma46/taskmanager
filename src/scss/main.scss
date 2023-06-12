@@ -3,3 +3,18 @@
 
 @import "./sidebar";
 @import "./profile";
+@import "./timeline";
+@import "./rightBar";
+
+main {
+	width: 100vw;
+	max-width: 1400px;
+	margin: 0px auto;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+}
+
+.rightBar {
+	padding: 40px 20px;
+}
