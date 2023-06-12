@@ -1,7 +1,7 @@
 #sidebar {
 	width: 300px;
 	height: 100vh;
-	position: fixed;
+	// position: fixed;
 }
 
 #logo {
@@ -18,8 +18,7 @@ nav {
 		width: 100%;
 		display: block;
 		padding: 20px 0px 20px 50px;
-		border-top-right-radius: 10px;
-		border-bottom-right-radius: 10px;
+		border-radius: 10px;
 		overflow: hidden;
 		cursor: pointer;
 		span {
@@ -28,14 +27,24 @@ nav {
 				margin-right: 10px;
 			}
 		}
-		&:hover {
-			background-color: $black;
+		&:hover,
+		.active {
+			background-color: $grey;
 			i {
 				color: $yellow;
 			}
 			a {
 				color: $white;
 			}
+		}
+	}
+	.active {
+		background-color: $black;
+		i {
+			color: $yellow;
+		}
+		a {
+			color: $white;
 		}
 	}
 }
