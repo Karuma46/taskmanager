@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const TaskItem = (props) => {
+export const TaskItem = (props) => {
 	return (
 		<>
 			<div className="task">
@@ -29,7 +29,11 @@ const TaskItem = (props) => {
 						<h4>Progress</h4>
 						<p>{props.progress}%</p>
 					</div>
-					<div className="taskProgressRange"></div>
+					<div className="taskProgressRange">
+						<div
+							className="taskProgressBar"
+							style={{ width: `${props.progress}%` }}></div>
+					</div>
 				</div>
 			</div>
 		</>
@@ -41,12 +45,22 @@ const Tasks = () => {
 		{
 			title: "Medical LP",
 			description: "Make a landing page and mobile app",
-			progress: "35",
+			progress: "15",
 		},
 		{
 			title: "Finance App",
 			description: "Branding and mobile app development",
-			progress: "35",
+			progress: "60",
+		},
+		{
+			title: "Finance App",
+			description: "Branding and mobile app development",
+			progress: "33",
+		},
+		{
+			title: "Finance App",
+			description: "Branding and mobile app development",
+			progress: "90",
 		},
 	]);
 	return (
