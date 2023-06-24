@@ -1,7 +1,11 @@
 #timeline {
 	min-width: 500px;
-	min-height: 100vh;
-	padding: 50px 30px;
+	height: 100vh;
+	padding: 30px 30px;
+	box-sizing: border-box;
+	// overflow: hidden;
+	display: flex;
+	flex-direction: column;
 	flex: 1;
 }
 
@@ -15,7 +19,7 @@
 #searchForm {
 	margin-bottom: 30px;
 	form {
-		background: lightgrey;
+		background: #f2f2f2;
 		border-radius: 10px;
 		padding: 10px 20px;
 		fieldset {
@@ -32,6 +36,13 @@
 		width: 100%;
 		height: 40px;
 	}
+}
+
+#tasksList {
+	// height: 800px;
+	padding: 0px 20px;
+	overflow: auto;
+	flex: 1;
 }
 
 #taskCategories {
@@ -58,10 +69,12 @@
 }
 
 .task {
-	flex: 2;
-	min-width: 500px;
+	// flex: 2;
+	width: 100%;
+	max-width: 250px;
 	min-height: 150px;
 	padding: 20px;
+	box-sizing: border-box;
 	border-radius: 20px;
 	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 	transition: all 0.2s ease-in-out;
@@ -101,11 +114,10 @@
 			border-radius: 5px;
 			overflow: hidden;
 			margin: 10px 0px;
-			&::after {
-				content: " ";
+			.taskProgressBar {
 				display: block;
 				background-color: $yellow;
-				width: 35%;
+				// width: 35%;
 				height: 100%;
 			}
 		}

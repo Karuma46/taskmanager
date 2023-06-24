@@ -15,6 +15,26 @@ main {
 	justify-content: space-between;
 }
 
-.rightBar {
-	padding: 40px 20px;
+/* width */
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 2px;
+	overflow: hidden;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: $lightYellow;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: $yellow;
 }
