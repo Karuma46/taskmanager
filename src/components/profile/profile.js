@@ -1,4 +1,20 @@
+import { useState } from "react";
+import { TaskItem } from "../../home/timeline/tasks";
+
 const Profile = () => {
+	const [tasks] = useState([
+		{
+			title: "Medical LP",
+			description: "Make a landing page and mobile app",
+			progress: "35",
+		},
+		{
+			title: "Finance App",
+			description: "Branding and mobile app development",
+			progress: "35",
+		},
+	]);
+
 	return (
 		<>
 			<div id="profile">
@@ -56,7 +72,7 @@ const Profile = () => {
 								<th>Tue</th>
 								<th>Wed</th>
 								<th>Thu</th>
-								<th>Fri</th>
+								<th className="active">Fri</th>
 								<th>Sat</th>
 								<th>Sun</th>
 							</tr>
@@ -76,39 +92,18 @@ const Profile = () => {
 								<td>7</td>
 								<td>8</td>
 								<td>9</td>
-								<td>10</td>
+								<td className="active">10</td>
 								<td>11</td>
 								<td>12</td>
 							</tr>
-							<tr>
-								<td>13</td>
-								<td>14</td>
-								<td>15</td>
-								<td>16</td>
-								<td>17</td>
-								<td>18</td>
-								<td>19</td>
-							</tr>
-							<tr>
-								<td>20</td>
-								<td>21</td>
-								<td>20</td>
-								<td>22</td>
-								<td>23</td>
-								<td>24</td>
-								<td>25</td>
-							</tr>
-							<tr>
-								<td>26</td>
-								<td>27</td>
-								<td>28</td>
-								<td>29</td>
-								<td>30</td>
-								<td>31</td>
-								<td>1</td>
-							</tr>
 						</tbody>
 					</table>
+				</div>
+
+				<div id="currentTasks">
+					{tasks.map((task, index) => (
+						<TaskItem key={index} {...task} />
+					))}
 				</div>
 			</div>
 		</>
